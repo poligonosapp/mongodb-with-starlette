@@ -1,3 +1,5 @@
+# https://github.com/mapbox/tilesets-cli
+
 # https://jwcrypto.readthedocs.io/en/latest/jwt.html#examples
 
 from jwcrypto import jwt, jwk
