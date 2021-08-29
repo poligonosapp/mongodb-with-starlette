@@ -6,6 +6,12 @@ from starlette.responses import JSONResponse
 from starlette.routing import Route
 from starlette.exceptions import HTTPException
 
+from github import Github;
+
+g = Github("repo-token")
+
+MONGODB_URL = Github("url")
+
 client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["MONGODB_URL"])
 db = client.college
 
