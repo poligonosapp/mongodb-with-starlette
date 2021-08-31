@@ -7,7 +7,7 @@ RUN python3
 COPY requirements.txt /code/requirements.txt
 RUN pip install
 
-COPY . /code
+COPY ./ code
 
 CMD ["python3", "uvicorn app:app --reload"]
 
