@@ -1,14 +1,13 @@
-FROM node:14-alpine
+FROM python3
 
 WORKDIR /code
 
-RUN npm install -g nodemon
+RUN python3
 
-COPY package.json /code/package.json
-RUN npm install && npm ls
-RUN mv /code/node_modules /node_modules
+COPY requirements.txt /code/requirements.txt
+RUN pip install
 
 COPY . /code
 
-CMD ["npm", "start"]
+CMD ["python3", "uvicorn app:app --reload"]
 
